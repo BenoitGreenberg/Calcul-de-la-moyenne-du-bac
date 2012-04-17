@@ -1,0 +1,151 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="content-language" content="fr" />
+<meta http-equiv="imagetoolbar" content="no" />
+<meta id="robots" content="index,follow" />
+<meta id="keywords" content="Bac S" />
+<meta id="description" content="Bac S" />
+<meta id="rating" content="general" />
+<meta id="author" content="Benoît GRUNENBERGER" />
+<meta id="copyright" content="Benoît GRUNENBERGER" />
+<meta id="generator" content="Bloc Note" />
+<meta id="distribution" content="Global" />
+<meta id="publisher" content="Benoît GRUNENBERGER" />
+<meta http-equiv="pragma" content="no-cache" />
+<link href="" rel="SHORTCUT ICON" />
+<link rel="stylesheet" type="text/css" media="all" href="all.css" />
+<title>Calcul de moyenne du Bac S</title>
+
+<script type="text/javascript" src="jquery-1.4.2.min.js"></script>
+<script type="text/javascript" src="bac.js"></script>
+
+</head>
+
+<body onload="check()";>
+
+<div class="main">
+  
+<h2 class="underline">Calcul de la moyenne du Bac Scientifique</h2>
+
+<p>
+Ce programme de simulation vous permet de calculer la moyenne du bac scientifique.
+</p>
+
+<fieldset>
+<legend>Bac S</legend>
+
+
+<table>
+
+
+<tr>
+<td>Matière</td> <td>Moyenne</td> <td>Coefficient</td> <td>Point</td>
+</tr>
+
+<tr>
+<td></td> <td></td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td>Enseignement de spécialité</td>
+</tr>
+
+
+<tr>
+<td>
+<select id="Ensei_sp" onChange="check()";>
+<option value="Mathematique">Mathématique</option>
+<option value="Physique-chimie">Physique-chimie</option>
+<option value="SVT">SVT</option>
+</select>
+</tr>
+
+<tr>
+<td></td> <td></td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td>Matière au choix</td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td>
+<select id="matiere_au_choix" onChange="check()";>
+<option value="SVT">SVT</option>
+<option value="Sciences_ingenieur">Sciences de l'ingénieur</option>
+</select> :
+</td>
+<td><input id="note_matiere_au_choix" type="number" min="0" max="20" tabindex="5" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_matiere_au_choix" class="center">6</td> <td id="point_matiere_au_choix" class="center">0</td>
+</tr>
+
+<tr>
+<td></td> <td></td> <td></td> <td></td>
+</tr>
+
+<tr>
+<td>Mathematique :</td> <td><input id="note_Mathematique" type="number" min="0" max="20" tabindex="10" size="4" onKeyUp="check()"/></td> <td id="coeff_Mathematique" class="center">9</td> <td id="point_Mathematique" class="center">0</td>
+<tr>
+
+<tr>
+<td>Physique-Chimie :</td> <td><input id="note_Physique_Chimie" type="number" min="0" max="20" tabindex="15" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_Physique_Chimie" class="center">6</td> <td id="point_Physique_Chimie" class="center">0</td>
+</tr>
+ 
+<tr> 
+<td>Histoire-Géographie :</td> <td><input id="note_Histoire_Geographie" type="number" min="0" max="20" tabindex="20" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_Histoire_Geographie" class="center">3</td> <td id="point_Histoire_Geographie" class="center">0</td>
+</tr>
+   
+<tr>
+<td>Français écrit :</td> <td><input id="note_Francais_ecrit" type="number" min="0" max="20" tabindex="25" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_Francais_ecrit" class="center">2</td> <td id="point_Francais_ecrit" class="center">0</td>
+</tr>
+
+<tr>
+<td>Français oral :</td> <td><input id="note_Francais_oral" type="number" min="0" max="20" tabindex="30" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_Francais_oral" class="center">2</td> <td id="point_Francais_oral" class="center">0</td>
+</tr>
+
+<tr>
+<td>Philosophie :</td> <td><input id="note_Philosophie" type="number" min="0" max="20" tabindex="35" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_Philosophie" class="center">3</td> <td id="point_Philosophie" class="center">0</td>
+</tr>
+
+<tr>
+<td>EPS :</td> <td><input id="note_EPS" type="number" min="0" max="20" tabindex="40" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_EPS" class="center">2</td> <td id="point_EPS" class="center">0</td>
+</tr>
+
+<tr>
+<td>Travaux Personnels Encadrés :</td> <td><input id="note_TPE" type="number" min="0" max="20" tabindex="45" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_TPE" class="center">2</td> <td id="point_TPE" class="center">0</td> <td>Seuls les points au-dessus de 10 sont pris en compte.</td>
+</tr>
+
+<tr>
+<td>LV 1 :</td> <td><input id="note_LV1" type="number" min="0" max="20" tabindex="50" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_LV1" class="center">3</td> <td id="point_LV1" class="center">0</td>
+</tr>
+
+<tr>
+<td>LV 2 :</td> <td><input id="note_LV2" type="number" min="0" max="20" tabindex="55" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_LV2" class="center">2</td> <td id="point_LV2" class="center">0</td>
+</tr>
+
+<tr>
+<td>Première option facultative :</td>
+<td><input id="note_opt_facultative_1" type="number" min="0" max="20" tabindex="60" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_opt_facultative_1" class="center">2</td> <td id="point_opt_facultative_1" class="center">0</td> <td>Seuls les points au-dessus de 10 sont pris en compte.</td>
+</tr>
+
+<tr>
+<td>Deuxième option facultative :</td>
+<td><input id="note_opt_facultative_2" type="number" min="0" max="20" tabindex="65" size="4" maxlength="4" onKeyUp="check();" /></td> <td id="coeff_opt_facultative_2" class="center">1</td> <td id="point_opt_facultative_2" class="center">0</td> <td>Seuls les points au-dessus de 10 sont pris en compte.</td>
+</tr>
+
+<tr>
+<td></td> <td></td> <td id="coeff_total" class="center"></td> <td id="point_total" class="center"></td>
+</tr>
+
+<tr>
+<td id="result" class="center" colspan="5"></td>
+</tr>
+
+</table>
+
+</fieldset>
+
+</div>
+</body>
+</html>
