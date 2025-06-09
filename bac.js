@@ -12,7 +12,7 @@ return t;
 
 if ($("#Ensei_sp").val()=='SVT' && $("#matiere_au_choix").val()!='SVT')
 {
-alert('Il n\'est pas possible de choisir SVT en enseignement de spécialité alors que vous n\'avez pas choisis SVT dans la matière au choix.');
+alert('Il n\'est pas possible de choisir SVT en enseignement de spécialité alors que vous n\'avez pas choisi SVT dans la matière au choix.');
 $("#Ensei_sp").val('Mathematique');
 }
 
